@@ -24,7 +24,7 @@ const NavBar = () => {
             <li><a href="#Header" className='cursor-pointer hover:text-gray-400'>Home</a></li>
             <li><a href="#About" className='cursor-pointer hover:text-gray-400'>About</a></li>
             <li><a href="#Projects" className='cursor-pointer hover:text-gray-400'>Projects</a></li>
-            <li><a href="#Testimonail" className='cursor-pointer hover:text-gray-400'>Testimonails</a></li>
+            <li><a href="#Testimonails" className='cursor-pointer hover:text-gray-400'>Testimonails</a></li>
           </ul>
           <button className='bg-white rounded-full px-8 py-2 hidden md:block' >Sign up</button>
 
