@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Title from './Title'
 import { assets, projectsData } from '../assets/assets'
+import { motion } from 'framer-motion'
 
 const Projects = () => {
     const [currentIndex,setCurrentIndex] = useState (0);
@@ -35,7 +36,14 @@ const Projects = () => {
 
 
   return (
-    <div id='Projects' className='container w-full mx-auto my-20  py-4 pt-20 px-6 md:px-20 lg:px-32  overflow-hidden'>
+    <motion.div
+    initial={{opacity:0, x:-200}}
+    transition={{duration:1}}
+    whileInView={{opacity:1, x:0}}
+    viewport={{once:true}}
+    
+    
+    id='Projects' className='container w-full mx-auto my-20  py-4 pt-20 px-6 md:px-20 lg:px-32  overflow-hidden'>
       <Title text1={'Projects'} text2={'Completed'} test3={'Crafting Spaces, Building Legacies—Explore Our Portfolio'} />
       {/*slider buttons */}
       <div className='flex items-center justify-end'>
@@ -76,7 +84,7 @@ const Projects = () => {
       </div>
 
 
-    </div>
+    </motion.div>
   )
 }
 

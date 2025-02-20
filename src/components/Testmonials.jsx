@@ -1,10 +1,18 @@
 import React from 'react'
 import Title from './Title'
 import { assets, testimonialsData } from '../assets/assets'
+import { motion } from 'framer-motion'
 
 const Testmonials = () => {
   return (
-    <div id='Testimonails'>
+    <motion.div 
+    initial={{opacity:0, x:100}}
+    transition={{duration:1}}
+    whileInView={{opacity:1, x:0}}
+    viewport={{once:true}}
+    
+    
+    id='Testimonails'>
         <Title text1={'Customer'} text2={'Testimonails'} test3={'Real Stories from Those Who Found Home with Us'}/>
         <div className="flex flex-wrap justify-center gap-8">
             {
@@ -32,7 +40,7 @@ const Testmonials = () => {
             }
         </div>
       
-    </div>
+    </motion.div>
   )
 }
 

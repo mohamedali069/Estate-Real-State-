@@ -1,10 +1,17 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import Title from './Title'
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div id='About' className='flex flex-col items-center justify-center container
+    <motion.div 
+    initial={{opacity:0, x:200}}
+    transition={{duration:1}}
+    whileInView={{opacity:1, x:0}}
+    viewport={{once:true}}
+
+    id='About' className='flex flex-col items-center justify-center container
     mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden'>
         <Title text1={'About'} text2={'Our Brand'} test3={'Passionate About Properties, Dedicated to Your Vision'}  />
         <div className="flex flex-col md:flex-row items-center md:items-start md:gap-20">
@@ -40,7 +47,7 @@ const About = () => {
            </div>
 
         </div>
-    </div>
+    </motion.div>
   )
 }
 
